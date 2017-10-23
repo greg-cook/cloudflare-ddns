@@ -1,5 +1,4 @@
-*.pyc
-*.swp
+.git
 config/logs/*
 config/zones/*
 !config/zones/example.com.yml

@@ -43,7 +43,7 @@ def main():
         return
 
     for zone in set(args.zone):
-        config_path = path.join(CURRENT_DIR, 'zones', zone + '.yml')
+        config_path = path.join('/config/zones', zone + '.yml')
         if not path.isfile(config_path):
             log.critical("Zone '{}' not found".format(zone))
             return
@@ -78,7 +78,7 @@ def main():
         cf_zone_name = data[0]['name']
 
         # Logging
-        fh = logging.FileHandler(path.join(CURRENT_DIR, 'logs', cf_zone_name + '.log'))
+        fh = logging.FileHandler(path.join('/config/logs', cf_zone_name + '.log'))
         fh.setFormatter(formatter)
         log.addHandler(fh)
 
